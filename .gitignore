@@ -1,0 +1,7 @@
+*.pyc
+*.db
+*.zip
+*.orig
+.idea/*
+log/*
+node_modules/*
