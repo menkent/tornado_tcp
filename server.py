@@ -68,6 +68,7 @@ class MyTCPListenerFromSource(TCPServer):
                     field_value = int.from_bytes(field_value, byteorder="big", signed=False)
 
                     # broadcast to listeners
+                    # todo: заменить на отложенные таски, чтобы не прерывать обработку данного сообщения рассылкой
                     await self.sender_server.broadcast_message(source_id, field_name, field_value)
 
                 # xor
